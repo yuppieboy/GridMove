@@ -1,0 +1,411 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		72A4EF5532C702CFC31E74C5 /* libPods-GridMove.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E29CDF37E2D1499F382DACE2 /* libPods-GridMove.a */; };
+		DAA295F71D6AF31500B528FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA295F61D6AF31500B528FB /* main.m */; };
+		DAA295FA1D6AF31500B528FB /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA295F91D6AF31500B528FB /* AppDelegate.m */; };
+		DAA295FD1D6AF31500B528FB /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA295FC1D6AF31500B528FB /* ViewController.m */; };
+		DAA296001D6AF31500B528FB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAA295FE1D6AF31500B528FB /* Main.storyboard */; };
+		DAA296021D6AF31500B528FB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DAA296011D6AF31500B528FB /* Assets.xcassets */; };
+		DAA296051D6AF31500B528FB /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DAA296031D6AF31500B528FB /* LaunchScreen.storyboard */; };
+		DAA2961D1D6AF37400B528FB /* LxGridView.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA296181D6AF37400B528FB /* LxGridView.m */; };
+		DAA2961E1D6AF37400B528FB /* LxGridViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA2961A1D6AF37400B528FB /* LxGridViewCell.m */; };
+		DAA2961F1D6AF37400B528FB /* LxGridViewFlowLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = DAA2961C1D6AF37400B528FB /* LxGridViewFlowLayout.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		A761AEE863E5A575EA7835F8 /* Pods-GridMove.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GridMove.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GridMove/Pods-GridMove.debug.xcconfig"; sourceTree = "<group>"; };
+		D3C6B479B7B68F60A7F0A105 /* Pods-GridMove.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GridMove.release.xcconfig"; path = "Pods/Target Support Files/Pods-GridMove/Pods-GridMove.release.xcconfig"; sourceTree = "<group>"; };
+		DAA295F21D6AF31500B528FB /* GridMove.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GridMove.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DAA295F61D6AF31500B528FB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		DAA295F81D6AF31500B528FB /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		DAA295F91D6AF31500B528FB /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		DAA295FB1D6AF31500B528FB /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		DAA295FC1D6AF31500B528FB /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		DAA295FF1D6AF31500B528FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		DAA296011D6AF31500B528FB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		DAA296041D6AF31500B528FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		DAA296061D6AF31500B528FB /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DAA296171D6AF37400B528FB /* LxGridView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LxGridView.h; sourceTree = "<group>"; };
+		DAA296181D6AF37400B528FB /* LxGridView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LxGridView.m; sourceTree = "<group>"; };
+		DAA296191D6AF37400B528FB /* LxGridViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LxGridViewCell.h; sourceTree = "<group>"; };
+		DAA2961A1D6AF37400B528FB /* LxGridViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LxGridViewCell.m; sourceTree = "<group>"; };
+		DAA2961B1D6AF37400B528FB /* LxGridViewFlowLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LxGridViewFlowLayout.h; sourceTree = "<group>"; };
+		DAA2961C1D6AF37400B528FB /* LxGridViewFlowLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LxGridViewFlowLayout.m; sourceTree = "<group>"; };
+		E29CDF37E2D1499F382DACE2 /* libPods-GridMove.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-GridMove.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		DAA295EF1D6AF31500B528FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				72A4EF5532C702CFC31E74C5 /* libPods-GridMove.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		572B6E8F17EBD33773623BEF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				A761AEE863E5A575EA7835F8 /* Pods-GridMove.debug.xcconfig */,
+				D3C6B479B7B68F60A7F0A105 /* Pods-GridMove.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		DAA295E91D6AF31500B528FB = {
+			isa = PBXGroup;
+			children = (
+				DAA295F41D6AF31500B528FB /* GridMove */,
+				DAA295F31D6AF31500B528FB /* Products */,
+				572B6E8F17EBD33773623BEF /* Pods */,
+				DB13878F22BFD9347DED234A /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		DAA295F31D6AF31500B528FB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				DAA295F21D6AF31500B528FB /* GridMove.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		DAA295F41D6AF31500B528FB /* GridMove */ = {
+			isa = PBXGroup;
+			children = (
+				DAA296161D6AF37400B528FB /* LxGridView */,
+				DAA295F81D6AF31500B528FB /* AppDelegate.h */,
+				DAA295F91D6AF31500B528FB /* AppDelegate.m */,
+				DAA295FB1D6AF31500B528FB /* ViewController.h */,
+				DAA295FC1D6AF31500B528FB /* ViewController.m */,
+				DAA295FE1D6AF31500B528FB /* Main.storyboard */,
+				DAA296011D6AF31500B528FB /* Assets.xcassets */,
+				DAA296031D6AF31500B528FB /* LaunchScreen.storyboard */,
+				DAA296061D6AF31500B528FB /* Info.plist */,
+				DAA295F51D6AF31500B528FB /* Supporting Files */,
+			);
+			path = GridMove;
+			sourceTree = "<group>";
+		};
+		DAA295F51D6AF31500B528FB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				DAA295F61D6AF31500B528FB /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		DAA296161D6AF37400B528FB /* LxGridView */ = {
+			isa = PBXGroup;
+			children = (
+				DAA296171D6AF37400B528FB /* LxGridView.h */,
+				DAA296181D6AF37400B528FB /* LxGridView.m */,
+				DAA296191D6AF37400B528FB /* LxGridViewCell.h */,
+				DAA2961A1D6AF37400B528FB /* LxGridViewCell.m */,
+				DAA2961B1D6AF37400B528FB /* LxGridViewFlowLayout.h */,
+				DAA2961C1D6AF37400B528FB /* LxGridViewFlowLayout.m */,
+			);
+			path = LxGridView;
+			sourceTree = "<group>";
+		};
+		DB13878F22BFD9347DED234A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E29CDF37E2D1499F382DACE2 /* libPods-GridMove.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		DAA295F11D6AF31500B528FB /* GridMove */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DAA296091D6AF31500B528FB /* Build configuration list for PBXNativeTarget "GridMove" */;
+			buildPhases = (
+				5C6346BA8CD623B36E94AF03 /* [CP] Check Pods Manifest.lock */,
+				DAA295EE1D6AF31500B528FB /* Sources */,
+				DAA295EF1D6AF31500B528FB /* Frameworks */,
+				DAA295F01D6AF31500B528FB /* Resources */,
+				AD077D40FCE7178CA04F575B /* [CP] Embed Pods Frameworks */,
+				983B973D220F31A3A9B89612 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GridMove;
+			productName = GridMove;
+			productReference = DAA295F21D6AF31500B528FB /* GridMove.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		DAA295EA1D6AF31500B528FB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = yudo;
+				TargetAttributes = {
+					DAA295F11D6AF31500B528FB = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = DAA295ED1D6AF31500B528FB /* Build configuration list for PBXProject "GridMove" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = DAA295E91D6AF31500B528FB;
+			productRefGroup = DAA295F31D6AF31500B528FB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				DAA295F11D6AF31500B528FB /* GridMove */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		DAA295F01D6AF31500B528FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAA296051D6AF31500B528FB /* LaunchScreen.storyboard in Resources */,
+				DAA296021D6AF31500B528FB /* Assets.xcassets in Resources */,
+				DAA296001D6AF31500B528FB /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5C6346BA8CD623B36E94AF03 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		983B973D220F31A3A9B89612 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GridMove/Pods-GridMove-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AD077D40FCE7178CA04F575B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GridMove/Pods-GridMove-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		DAA295EE1D6AF31500B528FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DAA2961D1D6AF37400B528FB /* LxGridView.m in Sources */,
+				DAA295FD1D6AF31500B528FB /* ViewController.m in Sources */,
+				DAA2961F1D6AF37400B528FB /* LxGridViewFlowLayout.m in Sources */,
+				DAA295FA1D6AF31500B528FB /* AppDelegate.m in Sources */,
+				DAA295F71D6AF31500B528FB /* main.m in Sources */,
+				DAA2961E1D6AF37400B528FB /* LxGridViewCell.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		DAA295FE1D6AF31500B528FB /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAA295FF1D6AF31500B528FB /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		DAA296031D6AF31500B528FB /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				DAA296041D6AF31500B528FB /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		DAA296071D6AF31500B528FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		DAA296081D6AF31500B528FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DAA2960A1D6AF31500B528FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A761AEE863E5A575EA7835F8 /* Pods-GridMove.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GridMove/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yudo.GridMove;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		DAA2960B1D6AF31500B528FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D3C6B479B7B68F60A7F0A105 /* Pods-GridMove.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = GridMove/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.yudo.GridMove;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		DAA295ED1D6AF31500B528FB /* Build configuration list for PBXProject "GridMove" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAA296071D6AF31500B528FB /* Debug */,
+				DAA296081D6AF31500B528FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DAA296091D6AF31500B528FB /* Build configuration list for PBXNativeTarget "GridMove" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DAA2960A1D6AF31500B528FB /* Debug */,
+				DAA2960B1D6AF31500B528FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = DAA295EA1D6AF31500B528FB /* Project object */;
+}
