@@ -6,7 +6,7 @@
 #import <UIKit/UIKit.h>
 
 
-static CGFloat const LxGridView_DELETE_RADIUS = 10;
+static CGFloat const LxGridView_DELETE_WIDTH = 20;
 static CGFloat const ICON_CORNER_RADIUS = 0;
 
 @class LxGridViewCell;

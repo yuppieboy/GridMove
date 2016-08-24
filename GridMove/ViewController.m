@@ -111,7 +111,7 @@ static NSString * const LxGridViewCellReuseIdentifier = @stringify(LxGridViewCel
 {
     LxGridViewCell * cell = [collectionView dequeueReusableCellWithReuseIdentifier:LxGridViewCellReuseIdentifier forIndexPath:indexPath];
     
-//    cell.backgroundColor=[UIColor groupTableViewBackgroundColor];
+    cell.backgroundColor=[UIColor whiteColor];
     
     cell.delegate = self;
     cell.editing = _gridView.editing;

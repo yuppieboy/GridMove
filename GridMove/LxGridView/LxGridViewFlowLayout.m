@@ -7,7 +7,7 @@
 
 
 static CGFloat const PRESS_TO_MOVE_MIN_DURATION = 0.2;
-static CGFloat const MIN_PRESS_TO_BEGIN_EDITING_DURATION = 0.6;
+static CGFloat const MIN_PRESS_TO_BEGIN_EDITING_DURATION = 0.2;
 
 CG_INLINE CGPoint CGPointOffset(CGPoint point, CGFloat dx, CGFloat dy)
 {
@@ -185,9 +185,9 @@ CG_INLINE CGPoint CGPointOffset(CGPoint point, CGFloat dx, CGFloat dy)
                 _remainSecondsToBeginEditing = MIN_PRESS_TO_BEGIN_EDITING_DURATION;
             }
             
-            if (self.editing == NO) {
-                return;
-            }
+//            if (self.editing == NO) {
+//                return;
+//            }
             
             _movingItemIndexPath = [self.collectionView indexPathForItemAtPoint:[longPress locationInView:self.collectionView]];
             
@@ -204,7 +204,10 @@ CG_INLINE CGPoint CGPointOffset(CGPoint point, CGFloat dx, CGFloat dy)
             NSCAssert([sourceCollectionViewCell isKindOfClass:[LxGridViewCell class]] || sourceCollectionViewCell == nil, @"LxGridViewFlowLayout: Must use LxGridViewCell as your collectionViewCell class!");
             LxGridViewCell * sourceGridViewCell = (LxGridViewCell *)sourceCollectionViewCell;
             
-            _beingMovedPromptView = [[UIView alloc]initWithFrame:CGRectOffset(sourceCollectionViewCell.frame, -LxGridView_DELETE_RADIUS, -LxGridView_DELETE_RADIUS)];
+            _beingMovedPromptView = [[UIView alloc]initWithFrame:CGRectOffset(sourceCollectionViewCell.frame, 0, 0)];
+            
+            _beingMovedPromptView.layer.borderColor = [UIColor groupTableViewBackgroundColor].CGColor;
+            _beingMovedPromptView.layer.borderWidth = 0.5;
             
             sourceCollectionViewCell.highlighted = YES;
             UIView * highlightedSnapshotView = [sourceGridViewCell snapshotView];
@@ -218,6 +221,13 @@ CG_INLINE CGPoint CGPointOffset(CGPoint point, CGFloat dx, CGFloat dy)
             
             [_beingMovedPromptView addSubview:snapshotView];
             [_beingMovedPromptView addSubview:highlightedSnapshotView];
+            
+            [UIView beginAnimations:nil context:nil];
+            [UIView setAnimationDuration:0.3];
+            [UIView setAnimationDelegate:self];
+            _beingMovedPromptView.transform = CGAffineTransformScale(CGAffineTransformIdentity, 1.2, 1.2);
+            [UIView commitAnimations];
+            
             [self.collectionView addSubview:_beingMovedPromptView];
             
 //            static NSString * const kVibrateAnimation = @stringify(kVibrateAnimation);
@@ -283,6 +293,15 @@ CG_INLINE CGPoint CGPointOffset(CGPoint point, CGFloat dx, CGFloat dy)
                 
                 _longPressGestureRecognizer.enabled = NO;
                 
+                [UIView beginAnimations:nil context:nil];
+                [UIView setAnimationDuration:0.3];
+                [UIView setAnimationDelegate:self];
+                _beingMovedPromptView.transform = CGAffineTransformScale(CGAffineTransformIdentity, 1, 1);
+                [UIView commitAnimations];
+
+                
+                [self.collectionView addSubview:_beingMovedPromptView];
+                
                 typeof(self) __weak weakSelf = self;
                 [UIView animateWithDuration:0.3
                                       delay:0
@@ -291,7 +310,8 @@ CG_INLINE CGPoint CGPointOffset(CGPoint point, CGFloat dx, CGFloat dy)
                                      typeof(self) __strong strongSelf = weakSelf;
                                      if (strongSelf) {
                                          CGPoint center = movingItemCollectionViewLayoutAttributes.center;
-                                         _beingMovedPromptView.center = CGPointMake(center.x-10, center.y-10);
+                                         _beingMovedPromptView.center = center;
+                                         
                                      }
                                  }
                                  completion:^(BOOL finished) {

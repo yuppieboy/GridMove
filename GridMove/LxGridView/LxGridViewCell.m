@@ -43,8 +43,8 @@ static CGFloat const VIBRATE_RADIAN = M_PI / 96;
     
     _deleteButton = [UIButton buttonWithType:UIButtonTypeCustom];
     [_deleteButton setImage:[UIImage imageNamed:@"delete"] forState:UIControlStateNormal];
+    
     [self.contentView addSubview:_deleteButton];
-    _deleteButton.hidden = YES;
     
     _titleLabel = [[UILabel alloc]init];
     _titleLabel.text = @"title";
@@ -133,7 +133,7 @@ static CGFloat const VIBRATE_RADIAN = M_PI / 96;
 {
 //    self.vibrating = editing;
     _deleteButton.hidden = !editing;
-    self.vibrating = NO;
+    self.vibrating = NO;//晃动开关
     
     if (editing) {
         self.layer.borderColor = [UIColor groupTableViewBackgroundColor].CGColor;
@@ -175,28 +175,41 @@ static CGFloat const VIBRATE_RADIAN = M_PI / 96;
         cellSnapshotView = [[UIImageView alloc]initWithImage:cellSnapshotImage];
     }
     
-    if ([_deleteButton respondsToSelector:@selector(snapshotViewAfterScreenUpdates:)]) {
-        deleteButtonSnapshotView = [_deleteButton snapshotViewAfterScreenUpdates:NO];
-    }
-    else {
-        UIGraphicsBeginImageContextWithOptions(_deleteButton.bounds.size, _deleteButton.opaque, 0);
-        [_deleteButton.layer renderInContext:UIGraphicsGetCurrentContext()];
-        UIImage * deleteButtonSnapshotImage = UIGraphicsGetImageFromCurrentImageContext();
-        UIGraphicsEndImageContext();
-        deleteButtonSnapshotView = [[UIImageView alloc]initWithImage:deleteButtonSnapshotImage];
-    }
+   
+
+    deleteButtonSnapshotView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, LxGridView_DELETE_WIDTH, LxGridView_DELETE_WIDTH)];
+    UIButton *delBtn = [[UIButton alloc]initWithFrame: CGRectMake(cellSnapshotView.frame.size.width-LxGridView_DELETE_WIDTH,
+                                                                  0,
+                                                                  LxGridView_DELETE_WIDTH,
+                                                                  LxGridView_DELETE_WIDTH)];
+    [delBtn setImage:[UIImage imageNamed:@"delete"] forState:UIControlStateNormal];
+        
+    [deleteButtonSnapshotView addSubview:delBtn];
     
-    snapshotView.frame = CGRectMake(-deleteButtonSnapshotView.frame.size.width / 2,
-                                    -deleteButtonSnapshotView.frame.size.height / 2,
-                                    deleteButtonSnapshotView.frame.size.width / 2 + cellSnapshotView.frame.size.width,
-                                    deleteButtonSnapshotView.frame.size.height / 2 + cellSnapshotView.frame.size.height);
-    cellSnapshotView.frame = CGRectMake(deleteButtonSnapshotView.frame.size.width / 2,
-                                        deleteButtonSnapshotView.frame.size.height / 2,
+//    if ([_deleteButton respondsToSelector:@selector(snapshotViewAfterScreenUpdates:)]) {
+//        deleteButtonSnapshotView = [_deleteButton snapshotViewAfterScreenUpdates:NO];
+//    }
+//    else {
+//        UIGraphicsBeginImageContextWithOptions(_deleteButton.bounds.size, _deleteButton.opaque, 0);
+//        [_deleteButton.layer renderInContext:UIGraphicsGetCurrentContext()];
+//        UIImage * deleteButtonSnapshotImage = UIGraphicsGetImageFromCurrentImageContext();
+//        UIGraphicsEndImageContext();
+//        deleteButtonSnapshotView = [[UIImageView alloc]initWithImage:deleteButtonSnapshotImage];
+//    }
+
+    
+    snapshotView.frame = CGRectMake(0,
+                                    0,
+                                    cellSnapshotView.frame.size.width,
+                                    cellSnapshotView.frame.size.height);
+    cellSnapshotView.frame = CGRectMake(0,
+                                        0,
                                         cellSnapshotView.frame.size.width,
                                         cellSnapshotView.frame.size.height);
-    deleteButtonSnapshotView.frame = CGRectMake(cellSnapshotView.frame.size.width-deleteButtonSnapshotView.frame.size.width/2, deleteButtonSnapshotView.frame.size.width/2,
-                                                deleteButtonSnapshotView.frame.size.width,
-                                                deleteButtonSnapshotView.frame.size.height);
+//    deleteButtonSnapshotView.frame = CGRectMake(cellSnapshotView.frame.size.width-deleteButtonSnapshotView.frame.size.width,
+//                                                0,
+//                                                deleteButtonSnapshotView.frame.size.width,
+//                                                deleteButtonSnapshotView.frame.size.height);
     
     [snapshotView addSubview:cellSnapshotView];
     [snapshotView addSubview:deleteButtonSnapshotView];
